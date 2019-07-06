@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+<form action="/testAction" method="POST">
+    <p>Stock Number</p>
+    <input type="text" placeholder="Stock Number" name="stockNumber">
+    <input type="text" placeholder="TrackerUID" name="TrackerUID">
+    <button type="submit">Add</button>
+    <ul class="Tracker_List">
+        {{#each trackerDevice}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</form>
